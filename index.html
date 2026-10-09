@@ -1,93 +1,49 @@
 <!doctype html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="color-scheme" content="light dark">
-    <meta name="description" content="个人主页入口：查看作品与介绍。">
-    <title>个人主页入口</title>
-    <style>
-      :root {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        color-scheme: light dark;
-        background: #f5f7fb;
-        color: #182438;
-      }
-
-      * { box-sizing: border-box; }
-
-      body {
-        min-height: 100vh;
-        min-height: 100dvh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 24px;
-      }
-
-      main {
-        width: min(100%, 520px);
-        padding: clamp(28px, 7vw, 48px);
-        border: 1px solid #dce3ee;
-        border-radius: 20px;
-        background: #fff;
-        box-shadow: 0 16px 48px rgb(20 40 70 / 8%);
-      }
-
-      h1 {
-        margin: 0 0 16px;
-        font-size: clamp(28px, 6vw, 38px);
-        line-height: 1.25;
-        letter-spacing: -.02em;
-      }
-
-      p {
-        margin: 0 0 28px;
-        color: #475569;
-        font-size: 16px;
-        line-height: 1.75;
-      }
-
-      a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 48px;
-        padding: 12px 20px;
-        border-radius: 10px;
-        background: #175cd3;
-        color: #fff;
-        font-weight: 600;
-        text-decoration: none;
-        transition: background-color .15s ease;
-      }
-
-      a:hover { background: #0d47a6; }
-      a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 3px; }
-
-      small {
-        display: block;
-        margin-top: 18px;
-        color: #64748b;
-        overflow-wrap: anywhere;
-      }
-
-      @media (prefers-color-scheme: dark) {
-        :root { background: #101827; color: #f1f5f9; }
-        main { background: #1b2738; border-color: #334155; box-shadow: none; }
-        p { color: #cbd5e1; }
-        small { color: #94a3b8; }
-        a { background: #3882ec; color: #fff; }
-        a:hover { background: #1d6fdd; }
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <h1>欢迎来到我的主页</h1>
-      <p>作品与介绍请前往正式主页查看。</p>
-      <a href="http://43.153.176.182:8088/projects/">访问项目主页</a>
-      <small>当前入口使用 HTTP，请勿输入密码或密钥。</small>
-    </main>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#eef3f8">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="Z. 的工程作品集：影音素材平台、数据回放、智能助手、文档问答与 Qt 桌面应用。">
+  <title>Z. · 工程作品集</title>
+  <style>
+    :root{color-scheme:light;--paper:#eef3f8;--surface:#fff;--ink:#142638;--muted:#536579;--line:#cbd7e2;--blue:#164fbd;--accent:#dce9fc;font-family:"Segoe UI","Microsoft YaHei UI","PingFang SC",sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink)}a{color:inherit}a:focus-visible{outline:3px solid var(--blue);outline-offset:4px;border-radius:2px}
+    .skip{position:absolute;left:-999px;top:0;padding:12px;background:#fff;z-index:5}.skip:focus{left:12px}.wrap{width:min(1120px,calc(100% - 48px));margin:auto}
+    .masthead{border-bottom:1px solid var(--line)}.masthead .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:76px}.brand{font-size:24px;font-weight:800;letter-spacing:-.07em;text-decoration:none}.brand span{color:var(--blue)}
+    nav{display:flex;gap:clamp(14px,3vw,34px);flex-wrap:wrap}nav a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:650}nav a:hover,.text-link:hover{color:var(--blue);text-decoration:underline;text-underline-offset:4px}
+    .hero{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(250px,.7fr);gap:clamp(32px,6vw,84px);align-items:end;padding:86px 0 76px}.hero h1{max-width:840px;margin:0 0 24px;font-size:clamp(38px,5.6vw,70px);line-height:1.17;letter-spacing:-.055em;font-weight:800}.hero p{max-width:650px;margin:0;color:var(--muted);line-height:1.8;font-size:17px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}.button{display:inline-flex;justify-content:center;align-items:center;min-height:46px;padding:10px 18px;border:1px solid var(--blue);text-decoration:none;font-size:14px;font-weight:700}.button-primary{background:var(--blue);color:#fff}.button-primary:hover{background:#0e397f}.button-secondary{color:var(--blue)}.button-secondary:hover{background:var(--accent)}
+    .hero-aside{border-left:4px solid var(--blue);padding:5px 0 5px 22px}.hero-aside strong{display:block;font-size:14px;margin-bottom:10px}.hero-aside p{font-size:14px;line-height:1.7}.hero-aside a{display:inline-block;margin-top:15px;color:var(--blue);font-weight:700;font-size:14px;text-underline-offset:4px}
+    .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;border-top:1px solid var(--ink);padding:22px 0 26px}.section-head h2{margin:0;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em}.section-head p{margin:0;color:var(--muted);font-size:14px}
+    .project-list{display:grid;gap:14px;margin:0 0 80px}.project{display:grid;grid-template-columns:minmax(170px,.56fr) minmax(0,1.5fr);gap:18px 38px;padding:26px 30px;border:1px solid var(--line);background:var(--surface)}.project.featured{border-left:5px solid var(--blue);padding-left:26px}.project h3{margin:0 0 10px;font-size:21px;letter-spacing:-.03em}.state{display:inline-block;padding:4px 8px;background:#e5f2f0;color:#1b5b55;font-size:12px;font-weight:700}.state.waiting{background:#edf1f5;color:#536579}.project-body p{margin:0 0 12px;line-height:1.7}.flow{color:var(--muted);font-size:14px}.flow strong{color:var(--ink)}.stack{color:var(--muted);font-size:13px}.links{display:flex;flex-wrap:wrap;gap:9px 24px;margin-top:16px}.text-link{color:var(--blue);font-size:14px;font-weight:700;text-underline-offset:4px}.links span{color:var(--muted);font-size:13px}
+    .resume{display:grid;grid-template-columns:minmax(180px,.65fr) minmax(0,1.35fr);gap:30px 65px;padding:37px 0 74px;border-top:1px solid var(--ink)}.resume h2{margin:0;font-size:clamp(24px,3vw,32px);letter-spacing:-.035em}.resume p{line-height:1.8;margin:0 0 16px}.resume ul{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 23px;padding:0;list-style:none}.resume li{padding:6px 10px;border:1px solid var(--line);background:var(--surface);font-size:13px}.resume-note{color:var(--muted);font-size:13px}
+    footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:23px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}footer a{color:var(--blue)}
+    @media(max-width:760px){.hero{grid-template-columns:1fr;padding:56px 0}.hero-aside{max-width:520px}.project{grid-template-columns:1fr;padding:22px}.project.featured{padding-left:18px}.resume{grid-template-columns:1fr}}
+    @media(max-width:520px){.wrap{width:min(100% - 32px,1120px)}.masthead .wrap{align-items:flex-start;flex-direction:column;justify-content:center;gap:12px;padding:16px 0}.section-head{display:block}.section-head p{margin-top:8px}.hero h1{font-size:38px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">跳转到正文</a>
+  <header class="masthead"><div class="wrap"><a class="brand" href="#top" aria-label="Z. 首页">Z<span>.</span></a><nav aria-label="主导航"><a href="#projects">项目</a><a href="#qt">Qt 桌面应用</a><a href="#resume">公开简历</a></nav></div></header>
+  <main id="main" class="wrap">
+    <section class="hero" id="top" aria-labelledby="hero-title"><div><h1 id="hero-title">把数据、模型与流程<br>接成可运行的产品。</h1><p>我主要做 C++ / Linux 工程、AI 应用和自动化交付。这里展示项目解决什么问题、接收什么输入、给出什么结果，以及目前能看到的演示。</p><div class="hero-actions"><a class="button button-primary" href="#projects">查看项目</a><a class="button button-secondary" href="#resume">阅读公开简历</a></div></div><aside class="hero-aside"><strong>项目服务入口</strong><p>独立服务器提供项目目录与演示。部分页面是只读演示或等待配置面板，具体状态见下方。</p><a href="http://portfolio.72945645.xyz/">打开服务器主页 ↗</a></aside></section>
+    <section id="projects" aria-labelledby="projects-title"><div class="section-head"><h2 id="projects-title">网页与服务项目</h2><p>功能、结果和当前演示状态</p></div><div class="project-list">
+      <article class="project featured"><div><h3>影音素材平台</h3><span class="state">在线应用</span></div><div class="project-body"><p>让团队上传、处理、管理和分享影音素材，支持中断后继续上传、后台转码、权限控制与限时分享。</p><p class="flow"><strong>输入 → 输出：</strong>视频或音频文件 → 可管理、可分享的素材。</p><p class="stack">核心技术：Java、Spring Boot、转码工作进程。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz:8088/">打开应用 ↗</a><span>仓库地址待核对</span></div></div></article>
+      <article class="project"><div><h3>雷达与图像回放</h3><span class="state">记录回放</span></div><div class="project-body"><p>同步查看 Oxford RobotCar 雷达、双目图像与已保存的位姿结果。网页演示可浏览全部 7,203 帧，不在浏览器中运行模型推理。</p><p class="flow"><strong>输入 → 输出：</strong>传感器记录与位姿数据 → 按帧同步的可视化回放。</p><p class="stack">核心技术：Python 数据准备、静态 HTML / JavaScript。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz/projects/radar/">查看回放 ↗</a><a class="text-link" href="https://github.com/nhh37740-glitch/radar-pose-demo">私有仓库 ↗</a></div></div></article>
+      <article class="project"><div><h3>Go 智能助手</h3><span class="state">在线演示</span></div><div class="project-body"><p>通过网页提交任务，让模型调用工具并逐步返回执行结果；同一 Agent 核心也可供其他应用复用。</p><p class="flow"><strong>输入 → 输出：</strong>工作目录与任务 → 工具执行过程和回答。</p><p class="stack">核心技术：Go、HTTP、SSE、Agent 工具循环。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz/projects/apps/go/">查看演示 ↗</a><a class="text-link" href="https://github.com/nhh37740-glitch/cc-agent-go">私有仓库 ↗</a></div></div></article>
+      <article class="project"><div><h3>Java 智能助手</h3><span class="state">在线演示</span></div><div class="project-body"><p>提供网页对话、模型调用、任务执行和会话读取，验证 Java 服务中的 Agent 交互流程。</p><p class="flow"><strong>输入 → 输出：</strong>网页任务与会话 → 流式回答及执行记录。</p><p class="stack">核心技术：Java 17、Spring Boot、SSE。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz/projects/apps/java/agent.html">查看演示 ↗</a><a class="text-link" href="https://github.com/nhh37740-glitch/cc-agent-java">私有仓库 ↗</a></div></div></article>
+      <article class="project"><div><h3>C++ 视频状态面板</h3><span class="state waiting">等待配置面板</span></div><div class="project-body"><p>展示视频处理服务的运行状态。公开页面目前只显示等待配置，未提供模型、视频或真实推理帧。</p><p class="flow"><strong>输入 → 输出：</strong>当前服务状态 → 等待配置面板。</p><p class="stack">核心技术：C++20、CMake、FFmpeg。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz/projects/apps/cpp/">打开状态面板 ↗</a><a class="text-link" href="https://github.com/nhh37740-glitch/cc-agent-cpp">私有仓库 ↗</a></div></div></article>
+      <article class="project"><div><h3>文档问答</h3><span class="state">只读演示</span></div><div class="project-body"><p>通过预设问题演示公开资料的检索与工具流程，显示来源和执行记录。当前公开实例使用离线 Mock 回答与 hash 检索，不代表线上模型生成质量；不开放上传或个人密钥。</p><p class="flow"><strong>输入 → 输出：</strong>公开资料与预设问题 → Mock 回答、检索来源和执行记录。</p><p class="stack">核心技术：Python、FastAPI、RAG。</p><div class="links"><a class="text-link" href="http://portfolio.72945645.xyz/projects/apps/rag/">查看只读演示 ↗</a><a class="text-link" href="https://github.com/nhh37740-glitch/ai-rag-platform">私有仓库 ↗</a></div></div></article>
+    </div></section>
+    <section id="qt" aria-labelledby="qt-title"><div class="section-head"><h2 id="qt-title">Qt 桌面应用</h2><p>Windows 原生程序</p></div><div class="project-list">
+      <article class="project"><div><h3>Qt 雷达回放</h3><span class="state waiting">桌面程序</span></div><div class="project-body"><p>在 Windows 桌面端检索、播放与比较 Oxford RobotCar 数据。支持 0.25–16 倍速、轨迹 / 位姿 / 误差对比和 CSV 导出。</p><p class="flow"><strong>输入 → 输出：</strong>7,203 帧同步雷达与双目图像、7 种已保存位姿方法 → 可交互对比和 CSV 数据。</p><p class="stack">核心技术：Qt Widgets、C++。网页雷达回放是同仓库的独立静态演示，不是桌面程序。</p><div class="links"><a class="text-link" href="https://github.com/nhh37740-glitch/radar-pose-demo">私有仓库 ↗</a><span>无浏览器版桌面程序演示</span></div></div></article>
+      <article class="project"><div><h3>Qt 设备工作台</h3><span class="state waiting">桌面程序</span></div><div class="project-body"><p>用模拟器发送设备记录，工作台接收后绘制曲线、保存与重载数据，并转发给接收端查看。</p><p class="flow"><strong>输入 → 输出：</strong>4,096 条 Intel Berkeley 实验室温湿度与电压记录 → TCP JSON 数据流、曲线、持久化记录和转发显示。</p><p class="stack">核心技术：Qt Widgets、C++、TCP JSON、DLL 模块。数据来自记录模拟，不代表真实设备接入。</p><div class="links"><a class="text-link" href="https://github.com/nhh37740-glitch/qt-device-workbench">私有仓库 ↗</a><span>暂无网页演示</span></div></div></article>
+    </div></section>
+    <section class="resume" id="resume" aria-labelledby="resume-title"><h2 id="resume-title">公开简历</h2><div><p>工程方向是 C++ / Linux、AI 应用开发与自动化测试。我关注模块边界、接口对接和实际运行结果，项目经验包括智能助手、文档问答、传感器记录回放、Qt 桌面应用与影音素材处理。</p><ul aria-label="使用过的技术"><li>C++ / CMake / Qt</li><li>Python / PyTorch</li><li>Java / Spring Boot</li><li>Go</li><li>RAG / Agent</li><li>MySQL / SQLite</li><li>Nginx / Git / Jenkins</li></ul><p><a class="text-link" href="https://portfolio.72945645.xyz:8443/resume.html">查看服务器简历页 ↗</a></p><p class="resume-note">完整简历仅通过单独提供的专属链接访问。本公开页面不包含该链接、令牌或完整 PDF。私有仓库需要 GitHub 访问权限。</p></div></section>
+  </main>
+  <footer class="wrap"><span>Z. · 工程作品集 · 2026</span><span>公开演示为 HTTP 页面，请勿输入密码或密钥。</span><a href="#top">返回顶部 ↑</a></footer>
+</body>
 </html>
