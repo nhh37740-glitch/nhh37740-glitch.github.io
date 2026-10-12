@@ -25,6 +25,7 @@
     ul.plain{margin:0;padding-left:22px;line-height:1.9}
     .note{margin:22px 0 56px;padding:18px 20px;border-left:4px solid var(--blue);background:var(--surface);line-height:1.8;font-size:15px}
     .links{display:flex;flex-wrap:wrap;gap:12px 26px;margin:26px 0 56px}
+    .cta{display:inline-flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid var(--blue);color:var(--blue);font-weight:700;text-decoration:none;font-size:14px}.cta:hover{background:var(--accent)}
     .text-link{color:var(--blue);font-size:14px;font-weight:700;text-underline-offset:4px}
     footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;padding:23px 0 34px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}footer a{color:var(--blue)}
     @media(max-width:520px){.wrap{width:min(100% - 32px,1120px)}}
@@ -36,10 +37,10 @@
     <h1>C++ 视频状态面板：本地运行录像</h1>
     <p class="lead">录像记录 <code>edge_agent</code> 在 Windows 本地的一次完整运行：red-panda 视频作为单向视频源，FFmpeg 按 PTS 解码并筛出候选帧，InternVL3-1B-Instruct 为每个候选帧生成描述，只读面板显示帧时间、变化分数和推送结果。</p>
     <span class="state">本地运行录像 · 不是服务器实例</span>
-    <video controls muted playsinline preload="metadata" poster="./cpp-agent-demo-poster.jpg" aria-label="C++ 边缘 Agent 实时面板运行录像">
-      <source src="./cpp-agent-demo.mp4" type="video/mp4">
-      浏览器不支持内嵌播放时，点这里直接打开或下载：<a href="./cpp-agent-demo.mp4">cpp-agent-demo.mp4</a>（MP4 / H.264 / 0.26 MB）。
+    <video controls preload="auto" playsinline poster="./cpp-agent-demo-poster.jpg" src="./cpp-agent-demo.mp4" onerror="document.getElementById('direct').hidden=false" aria-label="C++ 边缘 Agent 实时面板运行录像">
+      你的浏览器不支持内嵌视频播放，请使用下面的直接链接。
     </video>
+    <p id="direct" hidden>内嵌播放器加载失败，点这里直接播放：<a class="cta" href="./cpp-agent-demo.mp4">打开 cpp-agent-demo.mp4</a>（0.26 MB，可播放，可直接下载）</p>
     <ul class="facts">
       <li><strong>输入</strong>red-panda 视频，约 30 秒，单向解码，不使用 seek</li>
       <li><strong>模型</strong>InternVL3-1B-Instruct Q8_0 + mmproj</li>
@@ -57,7 +58,7 @@
     <ul class="plain">
       <li>整段录像没有截断，保留全部 65.8 秒；只抽掉四分之三的帧，播放因此快 4 倍。</li>
       <li>画面从 2560×1600 缩到 1280×800，文件从 136.5 MB 降到 0.26 MB。</li>
-      <li>面板里的中文说明文字在 1280 宽度下仍可读；录像原本只有操作音，网页版设为静音播放。</li>
+      <li>面板里的中文说明文字在 1280 宽度下仍可读；录像原本只有操作音，网页版没有音轨。</li>
     </ul>
     <h2>这次运行没有包含什么</h2>
     <ul class="plain">
